@@ -1,0 +1,36 @@
+.form-control{
+    margin: 1rem 0;
+}
+.form-control label,
+.form-control input,
+.form-control textarea
+{
+    display: block;
+    width: 100%;
+}
+.product-form{
+    width: 20rem;
+    max-height: 90%;
+    margin: auto;
+}
+.form-control input,
+.form-control textarea{
+    border: 1px solid #dbc441; 
+    border-radius: 2px;
+    font: inherit;
+}
+.form-control input:focus,
+.form-control textarea:focus{
+    outline-color: #00695c;
+}
+.form-control input.invalid{
+    border: 2px solid green;
+}
+button{
+    border: 1px solid #6200ff;
+    font: inherit;
+    color: #6200ff;
+    background-color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+}

@@ -1,0 +1,27 @@
+<header class="main-header">
+    <nav class="main-header__nav">
+        <ul class="main-header__item-list">
+            <li class="main-header__nav-item"><a class="active" href="/">shop</a></li>
+            <li class="main-header__nav-item"><a href="/product-list">Product</a></li>
+            <% if (isAuthenticated) { %>
+            <li class="main-header__nav-item"><a href="/cart">Cart</a></li>
+            <li class="main-header__nav-item"><a href="/order">Order</a></li>
+           
+           
+            <li class="main-header__nav-item"><a href="/admin/add-product">Add Product</a></li>
+            <li class="main-header__nav-item"><a href="/admin/admin-product">Admin Product</a></li>
+            <% } %>
+            <% if (!isAuthenticated) { %>
+            <li class="main-header__nav-item"><a href="/login">login</a></li>
+            <li class="main-header__nav-item"><a href="/signup">Signup</a></li>
+            <% } else { %>
+            <li class="main-header__nav-item">
+                <form action="/logout" method="post">
+                    <input type="hidden" name="_csrf" value="<%= csrf %>">
+                    <button type="submit">logout</button>
+                </form>
+            </li>
+            <% } %>
+        </ul>
+    </nav>
+</header>

@@ -1,0 +1,26 @@
+<%- include("../includes/head.ejs") %>
+</head>
+<body>
+   <%- include("../includes/navigation.ejs") %>
+   <main class="center">
+   <div class="grid">
+    <article class="card prod-item">
+        <header class="card__header">
+            <h1 class="prod__title"><%= prod.title %></h1>
+        </header>
+        <div class="card__image">
+            <img src="/<%= prod.imageUrl %>"
+                alt="<%= prod.title %>">
+        </div>
+        <div class="card__content">
+            <h2 class="prod__price">$<%= prod.price %></h2>
+            <p class="prod__description"><%= prod.description %></p>
+        </div>
+        <div class="card__actions">
+           <%- include("../includes/form") %>
+        </div>
+    </article>
+   
+</div>
+   </main>
+   <%- include("../includes/end.ejs") %>
