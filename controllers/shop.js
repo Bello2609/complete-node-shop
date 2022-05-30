@@ -6,7 +6,7 @@ const User = require("../models/user");
 const Order = require("../models/order");
 const path = require("path");
 const fs = require("fs");
-const products = require("../models/products");
+
 const stripe = require('stripe')(process.env.stripe_key);
 const ITEMS_PER_PAGE = 2;
 let totalItems;
